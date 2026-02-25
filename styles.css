@@ -1,0 +1,198 @@
+body {
+    background: linear-gradient(135deg, #0f0f0f, #000000);
+    color: white;
+}
+.main-title {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+}
+.sub-title {
+    text-align: center;
+    color: #aaaaaa;
+}
+.neon-card {
+    background: rgba(255,255,255,0.04);
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,195,255,0.25);
+    max-width: 700px;      
+    margin: auto;
+}
+.stButton>button {
+    background-color: black;
+    color: #00f7ff;
+    border: 2px solid #00f7ff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00f7ff;
+}
+.stButton>button:hover {
+    background-color: #00f7ff;
+    color: black;
+}
+.metric-card {
+    background: rgba(0,255,255,0.08);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px #00f7ff;
+}
+.quote-box {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #cccccc;
+    font-weight: 500;
+}
+.defend-word {
+    color: #00c3ff;
+    font-weight: 700;
+    text-shadow: 0 0 6px rgba(0,195,255,0.6);
+}
+.block-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.block-popup-box {
+    background: #111;
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid red;
+    box-shadow: 0 0 20px red;
+    animation: blinkBorder 1s infinite alternate;
+}
+
+@keyframes blinkBorder {
+    from { box-shadow: 0 0 10px red; }
+    to { box-shadow: 0 0 25px #ff0000; }
+}
+
+.block-popup-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.block-popup-text {
+    color: #ccc;
+    font-size: 18px;
+}
+            
+/* MATRIX BACKGROUND */
+.matrix-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0,255,0,0.08), black 70%);
+    z-index: 9998;
+    animation: pulseBg 2s infinite alternate;
+}
+
+@keyframes pulseBg {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+/* SHIELD ANIMATION */
+.shield-icon {
+    font-size: 40px;
+    animation: shieldPulse 1.5s infinite;
+}
+
+@keyframes shieldPulse {
+    0% { transform: scale(1); color: red; }
+    50% { transform: scale(1.2); color: #ff4d4d; }
+    100% { transform: scale(1); color: red; }
+}
+
+/* AUTO FADE */
+.fade-out {
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* BUTTON STYLE */
+.popup-btn {
+    margin-top: 15px;   
+    padding: 8px 15px;
+    background: black;
+    color: #00f7ff;
+    border: 1px solid #00f7ff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.popup-btn:hover {
+    background: #00f7ff;
+    color: black;
+}
+
+/* ===== MESSAGE TYPE POPUP ===== */
+.threat-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.threat-popup-box {
+    background: #111;
+    padding: 60px 80px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,255,255,0.6);
+}
+
+.threat-popup-title {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.safe-text {
+    color: #00ff99;
+}
+
+.phishing-text,
+.scam-text,
+.spoofing-text {
+    color: #ffcc00;
+}
+
+.violence-text,
+.harassment-text,
+.theft-text {
+    color: #ff3333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
